@@ -1,7 +1,7 @@
 const API_BASE_URL = 'http://localhost:3000/grads';
 const searchBtn = document.querySelector('.searchBtn');
-const inputFields = Array.from(document.querySelectorAll('.textFieldWrap > input'));
 const explosionAudio = document.querySelector('.boomAudio');
+const inputFields = Array.from(document.querySelectorAll('.textFieldWrap > input'));
 const gradsResults = document.querySelector('.data');
 const gradDataBox = document.querySelector('.gradDataBox');
 
@@ -9,20 +9,26 @@ const gradDataBox = document.querySelector('.gradDataBox');
 searchBtn.addEventListener('click', async (e) => {
     // Prevent page from refreshing
     e.preventDefault();
-    clearData();
     const gradsData = await fetchGradsData();
+    clearData();
     showGradsData(gradsData);
     explosionAudio.play();
     addExplosion();
 });
 
 
+
+
+
+
+
 // Fetching grads data from API
 const fetchGradsData = () => {
     const inputValues = inputFields.map(field => [field.name, field.value]);
-
+    console.log(inputValues);
     const queryParams = inputValues.reduce((acc,val) => {
         const [param, value] = val;
+        console.log({ param, value });
 
         if(!value) return acc;
 
@@ -30,6 +36,7 @@ const fetchGradsData = () => {
         return acc += acc ? `&${paramValuePair}` : `?${paramValuePair}`
     }, '');
     
+    console.log(`${API_BASE_URL}${queryParams}`);
     return fetch(`${API_BASE_URL}${queryParams}`).then(res => res.json());
 }
 
@@ -65,3 +72,5 @@ const clearData = () => {
         gradDataBox.querySelector('.explosion').remove();    
     }, 5000);
 }
+
+

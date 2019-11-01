@@ -87,7 +87,7 @@ input {
     font-size: 2rem;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-items: center;
 }
 
 
