@@ -63,8 +63,8 @@ const showGradsData = (grads) => {
 const clearData = () => {
     inputFields.forEach(field => field.value = '');
     gradsResults.textContent = '';
-    gradsResults.classList.remove('generated');    
     setTimeout(() => {
+        gradsResults.classList.remove('generated');    
         gradDataBox.querySelector('.explosion').remove();    
     }, 5000);
 }
