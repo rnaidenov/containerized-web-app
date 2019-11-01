@@ -1,0 +1,173 @@
+* {
+    margin:0;
+
+    /* Global vars */
+    --light-gray: rgb(231, 231, 231);
+    --lighter-gray: rgb(243, 243, 243);
+}
+
+
+.wrapper{
+    grid-template-rows: 1fr 1fr;
+    height: 1vh;
+}
+
+.wrapper-search{
+    background: var(--lighter-gray);
+    height: 38vh;
+}
+
+.wrapper-search--inner{
+    background: var(--light-gray);
+    height: 98.5%;
+    position: relative;
+}
+
+.wrapper-results{
+    height: 62vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.inputForm{
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.textFieldWrap{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2%;
+    justify-items: center;
+}
+
+.textFieldWrap > input {
+    width: 100%;
+    height: 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.searchBtn{
+    border: none;
+    border-radius: 2.5px;
+    height: 50px;
+    width: 50px;
+    background: pink;
+    position: absolute;
+    bottom: 2.5%;
+}
+
+.searchBtn--image{
+    width: 60%;
+}
+
+
+.gradsResults{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+.data{
+    position: absolute;
+    top: 100px;
+}
+
+.data.generated{
+    animation: showUp 4s linear both;
+}
+
+.gradDataBox{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    grid-row: 2;
+}
+
+.gradDataBox > img {
+    height: 100%;
+}
+
+
+.gradDataBox > * {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.gradDataBox-text{
+    background: white;
+    border: 10px solid black;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+
+.explosion{
+    width: 100%;
+    position: absolute;
+    top: -62px;
+    z-index: 1;
+    text-align: center;
+    height: 250px;
+    animation: explode 3.5s linear both;
+}
+
+.explosion--image{
+    height: 100%;
+}
+
+
+@keyframes explode{
+    0% {
+        opacity: 0;
+        height: 250px;
+    }
+    50% {
+        opacity: 1;
+        height: 270px;
+    }
+    100% {
+        opacity: 0;
+        height: 280px;
+    }
+}
+
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.75);
+    }
+    75% {
+        opacity: 0.65;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
