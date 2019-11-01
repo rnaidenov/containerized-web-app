@@ -154,7 +154,6 @@ input {
     }
     50% {
         opacity: 1;
-        height: 270px;
     }
     100% {
         opacity: 0;
