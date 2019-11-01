@@ -289,6 +289,7 @@ input {
         transform: scale(0);
     }
     50% {
+        opacity: 0.15;
         transform: scale(0.65);
     }
     75% {
