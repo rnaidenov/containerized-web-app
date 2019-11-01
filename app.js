@@ -9,18 +9,22 @@ const gradDataBox = document.querySelector('.gradDataBox');
 searchBtn.addEventListener('click', async (e) => {
     // Prevent page from refreshing
     e.preventDefault();
-    clearData();
     const gradsData = await fetchGradsData();
+    clearData();
     showGradsData(gradsData);
     explosionAudio.play();
     addExplosion();
 });
 
 
+
+
+
+
+
 // Fetching grads data from API
 const fetchGradsData = () => {
     const inputValues = inputFields.map(field => [field.name, field.value]);
-
     const queryParams = inputValues.reduce((acc,val) => {
         const [param, value] = val;
 
@@ -65,3 +69,5 @@ const clearData = () => {
         gradDataBox.querySelector('.explosion').remove();    
     }, 5000);
 }
+
+

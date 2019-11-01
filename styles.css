@@ -4,6 +4,7 @@
     /* Global vars */
     --light-gray: rgb(231, 231, 231);
     --lighter-gray: rgb(243, 243, 243);
+    --cool-pink: rgb(180, 145, 151);;
 }
 
 input {
@@ -65,7 +66,7 @@ input {
     border-radius: 2.5px;
     height: 50px;
     width: 50px;
-    background: pink;
+    background: var(--cool-pink);
     position: absolute;
     bottom: 2.5%;
 }
@@ -76,12 +77,12 @@ input {
 
 
 .gradsResults{
-    width: 100%;
     font-family: 'Josefin Sans', sans-serif;
+    height: 30%;
     text-align: center;
     position: relative;
     display: flex;
-    justify-items: center;
+    justify-content: center;
 }
 
 
@@ -160,6 +161,7 @@ input {
     }
 
     .gradsResults {
+        width: 100%;
         height: 30%;
         font-size: 2.5rem;
     }
@@ -217,6 +219,7 @@ input {
 
 
     .gradsResults {
+        width: 85%;
         font-size: 2rem;
     }
 
