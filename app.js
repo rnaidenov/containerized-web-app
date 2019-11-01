@@ -1,7 +1,7 @@
 const API_BASE_URL = 'http://localhost:3000/grads';
 const searchBtn = document.querySelector('.searchBtn');
-const inputFields = Array.from(document.querySelectorAll('.textFieldWrap > input'));
 const explosionAudio = document.querySelector('.boomAudio');
+const inputFields = Array.from(document.querySelectorAll('.textFieldWrap > input'));
 const gradsResults = document.querySelector('.data');
 const gradDataBox = document.querySelector('.gradDataBox');
 
@@ -63,11 +63,8 @@ const showGradsData = (grads) => {
 const clearData = () => {
     inputFields.forEach(field => field.value = '');
     gradsResults.textContent = '';
-    gradsResults.classList.remove('generated');    
-
     setTimeout(() => {
+        gradsResults.classList.remove('generated');    
         gradDataBox.querySelector('.explosion').remove();    
     }, 5000);
 }
-
-

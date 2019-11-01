@@ -130,9 +130,6 @@ input {
     animation: explode 3.5s linear both;
 }
 
-.explosion--image{
-    height: 250px;
-}
 
 
 @media (max-width: 420px) {
@@ -178,6 +175,11 @@ input {
         top: -50px;
     }
 
+
+    .explosion--image{
+        height: 250px;
+    }
+
     .gradDataBox > * {
         bottom: 5%;
     }
@@ -197,7 +199,11 @@ input {
 
 
     .explosion{ 
-        top: -157.5px;
+        top: -400px;
+    }
+
+    .explosion--image{ 
+        height: 500px;
     }
 
    .inputForm {
