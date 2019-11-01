@@ -4,6 +4,7 @@
     /* Global vars */
     --light-gray: rgb(231, 231, 231);
     --lighter-gray: rgb(243, 243, 243);
+    --cool-pink: rgb(180, 145, 151);
 }
 
 
@@ -70,7 +71,7 @@ input {
     border-radius: 2.5px;
     height: 50px;
     width: 50px;
-    background: pink;
+    background: var(--cool-pink);
     position: absolute;
     bottom: 2.5%;
 }
@@ -81,13 +82,14 @@ input {
 
 
 .gradsResults{
-    width: 100%;
+    width: 80%;
     font-family: 'Josefin Sans', sans-serif;
-    text-align: center;
+    height: 30%;
     font-size: 2rem;
+    text-align: center;
     position: relative;
     display: flex;
-    justify-items: center;
+    justify-content: center;
 }
 
 
@@ -96,7 +98,7 @@ input {
     top: 100px;
 }
 
-.data.generated{
+.data.generated {
     animation: showUp 4s linear both;
 }
 
@@ -136,14 +138,14 @@ input {
 
 .explosion{
     width: 100%;
-    top: -157.5px;
+    top: -450px;
     z-index: 1;
     text-align: center;
     animation: explode 3.5s linear both;
 }
 
 .explosion--image{
-    height: 250px;
+    height: 500px;
 }
 
 
@@ -168,12 +170,12 @@ input {
         transform: scale(0);
     }
     50% {
-        opacity: 0.5;
-        transform: scale(0.75);
+        opacity: 0.25;
+        transform: scale(0.8);
     }
     75% {
         opacity: 0.65;
-        transform: scale(0.8);
+        transform: scale(0.9);
     }
     100% {
         opacity: 1;

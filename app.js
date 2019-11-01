@@ -25,10 +25,8 @@ searchBtn.addEventListener('click', async (e) => {
 // Fetching grads data from API
 const fetchGradsData = () => {
     const inputValues = inputFields.map(field => [field.name, field.value]);
-    console.log(inputValues);
     const queryParams = inputValues.reduce((acc,val) => {
         const [param, value] = val;
-        console.log({ param, value });
 
         if(!value) return acc;
 
@@ -36,7 +34,6 @@ const fetchGradsData = () => {
         return acc += acc ? `&${paramValuePair}` : `?${paramValuePair}`
     }, '');
     
-    console.log(`${API_BASE_URL}${queryParams}`);
     return fetch(`${API_BASE_URL}${queryParams}`).then(res => res.json());
 }
 
@@ -67,7 +64,6 @@ const clearData = () => {
     inputFields.forEach(field => field.value = '');
     gradsResults.textContent = '';
     gradsResults.classList.remove('generated');    
-
     setTimeout(() => {
         gradDataBox.querySelector('.explosion').remove();    
     }, 5000);
