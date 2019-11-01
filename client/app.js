@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3000/grads';
+const API_BASE_URL = '/api/grads';
 const searchBtn = document.querySelector('.searchBtn');
 const explosionAudio = document.querySelector('.boomAudio');
 const inputFields = Array.from(document.querySelectorAll('.textFieldWrap > input'));
