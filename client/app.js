@@ -6,6 +6,7 @@ const gradsResults = document.querySelector('.data');
 const gradDataBox = document.querySelector('.gradDataBox');
 
 
+
 searchBtn.addEventListener('click', async (e) => {
     // Prevent page from refreshing
     e.preventDefault();
@@ -15,10 +16,6 @@ searchBtn.addEventListener('click', async (e) => {
     explosionAudio.play();
     addExplosion();
 });
-
-
-
-
 
 
 
