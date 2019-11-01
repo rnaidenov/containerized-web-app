@@ -7,6 +7,11 @@
 }
 
 
+input {
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+
 .wrapper{
     grid-template-rows: 1fr 1fr;
     height: 1vh;
@@ -77,6 +82,7 @@
 
 .gradsResults{
     width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     font-size: 2rem;
     position: relative;
@@ -100,7 +106,6 @@
     position: relative;
     display: flex;
     justify-content: center;
-    grid-row: 2;
 }
 
 .gradDataBox > img {
@@ -110,37 +115,42 @@
 
 .gradDataBox > * {
     position: absolute;
-    top: 50%;
     transform: translateY(-50%);
+}
+
+.gradDataBox-image {
+    top: 50%;
 }
 
 .gradDataBox-text{
     background: white;
+    font-family: 'Staatliches', cursive;
     border: 10px solid black;
     padding: 10px;
+    width: 200px;
+    text-align: center;
+    top: 65%;
     font-size: 2rem;
 }
 
 
 .explosion{
     width: 100%;
-    position: absolute;
-    top: -62px;
+    top: -157.5px;
     z-index: 1;
     text-align: center;
-    height: 250px;
     animation: explode 3.5s linear both;
 }
 
 .explosion--image{
-    height: 100%;
+    height: 250px;
 }
 
 
 @keyframes explode{
     0% {
         opacity: 0;
-        height: 250px;
+        transform: scale(1);
     }
     50% {
         opacity: 1;
@@ -148,7 +158,7 @@
     }
     100% {
         opacity: 0;
-        height: 280px;
+        transform: scale(1.15);        
     }
 }
 

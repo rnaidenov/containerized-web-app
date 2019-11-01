@@ -12,9 +12,8 @@ searchBtn.addEventListener('click', async (e) => {
     clearData();
     const gradsData = await fetchGradsData();
     showGradsData(gradsData);
-    // explosionAudio.play();
+    explosionAudio.play();
     addExplosion();
-    console.log({ gradsData });
 });
 
 
@@ -61,4 +60,8 @@ const clearData = () => {
     inputFields.forEach(field => field.value = '');
     gradsResults.textContent = '';
     gradsResults.classList.remove('generated');    
+
+    setTimeout(() => {
+        gradDataBox.querySelector('.explosion').remove();    
+    }, 5000);
 }
